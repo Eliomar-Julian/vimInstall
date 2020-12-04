@@ -16,6 +16,11 @@
     ~~~~
     ./install.ps1
     ~~~~
+    - caso o script não rode use
+        ~~~~
+        Set-ExecutionPolicy Unrestricted
+        ~~~~
+        digite 'S' e rode o script novamente
 5. Rode:
     ~~~~
     vim "C:\Users\$env:USERNAME\vimfiles\autoload\plug.vim"
@@ -33,12 +38,8 @@
 
 __Obs:__ para usar seu vim em fullscreen inicialize-o pelo terminal
 
-````
-cmd vim 
-````
-> depois de abrir pressione F11
+> cmd "F11" vim 
+
 ou
-````
-powershell vim
-````
-> depois de abrir pressione F11
+
+> powershell "F11" vim
