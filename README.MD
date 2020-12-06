@@ -5,7 +5,7 @@
 
 1. abra o PowerShell como adminstrador e insira os comandos abaixo linha a linha
     ````
-    cd ~/
+    cd ~\Desktop
     git clone https://github.com/Eliomar-Julian/vimInstall.git
     cd ./vimInstall
     Set-ExecutionPolicy Unrestricted
@@ -13,7 +13,7 @@
     digite 'S' e rode o script
     ````
     ./install.ps1
-    vim "C:\Users\$env:USERNAME\vimfiles\autoload\plug.vim"
+    vim C:\Users\$env:USERNAME\vimfiles\autoload\plug.vim
     ````
 2. Dentro de seu Vim rode as sequencias de comandos:
     ~~~~
