@@ -18,6 +18,7 @@
 2. Dentro de seu Vim rode as sequencias de comandos:
     ~~~~
     :runtime %
+    :source %
     :PlugInstall
     ~~~~
 
