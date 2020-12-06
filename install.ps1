@@ -2,7 +2,7 @@
 {
     $path='C:\tools\vim'
     $user=$env:USERNAME
-    if (!Test-Path $path) 
+    if (! Test-Path $path) 
     {
         choco install vim -y
         New-Item -Path "C:\$user\vimfiles\" -Name "plugged" -ItemType "directory"
