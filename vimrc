@@ -5,6 +5,11 @@ call plug#begin('~\vimfiles\plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'mattn/emmet-vim'
+    Plug 'jamshedvesuna/vim-markdown-preview'
+	Plug 'shime/vim-livedown'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ashisha/image.vim'
+	Plug 'ryanoasis/nerd-fonts'
 call plug#end()
 
 set encoding=UTF-8
@@ -24,6 +29,7 @@ colorscheme monokai
 	autocmd FileType html,css EmmetInstall
 	autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 	CocEnable
+	AirlineToggle
 	set shell=PowerShell
 	set smartindent
 	nnoremap <c-v> "+p
