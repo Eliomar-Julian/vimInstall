@@ -2,13 +2,13 @@
 {
     $path='C:\tools\vim'
     $user=$env:USERNAME
-    if (! Test-Path $path) 
+    if ((Test-Path $path) -eq $False) 
     {
         choco install vim -y
         New-Item -Path "C:\$user\vimfiles\" -Name "plugged" -ItemType "directory"
         New-Item -Path "C:\$user\vimfiles\" -Name "autoload" -ItemType "directory"
         Move-Item -Path ".\vimrc" -Destination "C:\$user\vimfiles"
-        Move-Item -Path ".\plugvim" -Destination "C:\$user\vimfiles\autoload"
+        Move-Item -Path ".\plug.vim" -Destination "C:\$user\vimfiles\autoload"
         Move-Item -Path ".\monokai.vim" -Destination "C:\tools\vim\vim82\colors"
     }
 }
