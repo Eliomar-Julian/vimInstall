@@ -13,7 +13,7 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 call plug#end()
 
 set encoding=UTF-8
-colorscheme dracula
+colorscheme monokai
 
 " configu
 	set noerrorbells
