@@ -3,34 +3,21 @@
 
 *passo a passo para a instalação*
 
-1. abra o PowerShell como adminstrador
-2. navegue ate a pasta do projeto via PowerShell
-    ~~~
+1. abra o PowerShell como adminstrador e insira os comandos abaixo linha a linha
+    ````
+    cd ~/
+    git clone https://github.com/Eliomar-Julian/vimInstall.git
     cd ./vimInstall
-    ~~~
-3. rode o comando: 
-    ~~~
-    Set-ExecutionPolicy Bypass -Scope Process
-    ~~~
-4. Agora rode o script:
-    ~~~~
+    Set-ExecutionPolicy Unrestricted
+    ````
+    digite 'S' e rode o script
+    ````
     ./install.ps1
-    ~~~~
-    - caso o script não rode use
-        ~~~~
-        Set-ExecutionPolicy Unrestricted
-        ~~~~
-        digite 'S' e rode o script novamente
-5. Rode:
-    ~~~~
     vim "C:\Users\$env:USERNAME\vimfiles\autoload\plug.vim"
-    ~~~~
-6. Dentro de seu Vim rode:
+    ````
+2. Dentro de seu Vim rode as sequencias de comandos:
     ~~~~
     :runtime %
-    ~~~~
-7. Aida dentro de seu Vim rode:
-    ~~~~
     :PlugInstall
     ~~~~
 
