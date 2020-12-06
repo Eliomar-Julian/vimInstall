@@ -7,7 +7,7 @@
         choco install vim -y
         New-Item -Path "C:\Users\$user\vimfiles\" -Name "plugged" -ItemType "directory"
         New-Item -Path "C:\Users\$user\vimfiles\" -Name "autoload" -ItemType "directory"
-        Move-Item -Path ".\vimrc" -Destination "C:\$user\vimfiles"
+        Move-Item -Path ".\vimrc" -Destination "C:\Users\$user\vimfiles"
         Move-Item -Path ".\plug.vim" -Destination "C:\Users\$user\vimfiles\autoload"
         Move-Item -Path ".\monokai.vim" -Destination "C:\tools\vim\vim82\colors"
     }
