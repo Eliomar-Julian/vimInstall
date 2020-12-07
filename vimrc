@@ -1,4 +1,4 @@
-call plug#begin('~\AppData\Local\nvim\plugged')
+call plug#begin('~\vimfiles\plugged')
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'vim-scripts/auto-pairs-gentle'
