@@ -1,36 +1,54 @@
-call plug#begin('~\vimfiles\plugged')
-	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'vim-scripts/auto-pairs-gentle'
-	Plug 'vim-airline/vim-airline'
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'mattn/emmet-vim'
-    Plug 'jamshedvesuna/vim-markdown-preview'
-	Plug 'shime/vim-livedown'
+" gerenciador de pacotes
+call plug#begin(stdpath('config') . '/plugged')
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'ashisha/image.vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'davidhalter/jedi-vim'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'scrooloose/nerdtree'
+	Plug 'jiangmiao/auto-pairs'
 	Plug 'dracula/vim', { 'as': 'dracula' }
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-set encoding=UTF-8
-colorscheme monokai
-
-" configu
-	set noerrorbells
-	set belloff=all
-	set mouse=a
-	set number
-	set hidden
+" recomendacoes....
+	filetype plugin indent on
 	syntax enable
-	set shiftwidth=4
+	
+" configuração nerdtree
+		nnoremap <leader>n :NERDTreeFocus<CR>
+		nnoremap <C-n> :NERDTree<CR>
+		nnoremap <C-t> :NERDTreeToggle<CR>
+		nnoremap <C-f> :NERDTreeFind<CR>
+		autocmd VimEnter * NERDTree
+		let g:NERDTreeDirArrowExpandable = '▸'
+		let g:NERDTreeDirArrowCollapsible = '▾'
+
+" opções do edito para python
+		let g:python3_host_prog='C:/Users/foo/Envs/neovim3/Scripts/python.exe'
+		let g:python_host_prog='C:/Users/foo/Envs/neovim/Scripts/python.exe'
+
+
+"configurando servidor de linguagem python 
+	let g:python3_host_prog='C:/Python38/python.exe'
+	let g:python_host_prog='C:/Python38/python.exe'
+
+"aparencia...
+	colorscheme dracula
+	autocmd BufEnter * AirlineTheme base16_colors
+
+" minhas configuaçoões pessoais
+	set number
+	set encoding=utf-8
+	set cursorline
 	set tabstop=4
-	set autoindent
-	let g:AutoPairsUseInsertedCount = 1
-	let g:user_emmet_install_global = 0
-	autocmd FileType html,css EmmetInstall
-	autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-	autocmd BufWritePre * CocEnable
-	autocmd BufWritePre * AirlineToggle
-	set shell=cmd
+	set background=dark
+	set relativenumber
 	set smartindent
-	nnoremap <c-v> "+p
+	set paste
+	set mouse=a
+
+" auto pair
+let g:AutoPairsFlyMode = 1
+let g:AutoPairsShortcutBackInsert = '<M-b>'
+nnoremap <c-v> "+p
+
